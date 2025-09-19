@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>BearAvt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .circle {
+            width: 500px;
+            height: 500px;
+            background-color: lightskyblue;
+            position: relative;
+            border-radius: 20px;
+        }
+        .circle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            background-color: blanchedalmond;
+            background-image: repeating-linear-gradient(-45deg, yellow 0, yellow 10px, white 10px, white 20px), 
+            repeating-linear-gradient(45deg, yellow 0, yellow 10px, white 10px, white 20px);
+        }
+        .comment-icon {
+            color: #056ad5;
+            font-size: 80px;
+            position: absolute;
+            top: 100px;
+            right: 50px;
+        }
+        .image {
+            width: 250px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .imageCut {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 7px dashed black;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="circle">
+    <i class="fas fa-comment-dots comment-icon"></i>
+    <div class="imageCut">
+        <img src="image/panda.png" alt="Panda" class="image">
+    </div>
+</div>
 </body>
 </html>
