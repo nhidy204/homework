@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>BearAvt</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .circle {
             width: 500px;
@@ -25,12 +24,60 @@
             background-image: repeating-linear-gradient(-45deg, yellow 0, yellow 10px, white 10px, white 20px), 
             repeating-linear-gradient(45deg, yellow 0, yellow 10px, white 10px, white 20px);
         }
-        .comment-icon {
-            color: #056ad5;
-            font-size: 80px;
+        .cmt-icon {
+            border: 40px solid #056ad5;
+            border-radius: 50%;
             position: absolute;
-            top: 100px;
-            right: 50px;
+            top: 109px;
+            right: 40px;
+            content: '';
+            width: 16px;
+        }
+        .dot1{
+            border: 3px solid lightskyblue;
+            background-color: lightskyblue;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 150%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+        }
+        .dot2{
+            border: 3px solid lightskyblue;
+            background-color: lightskyblue;
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+        }
+        .dot3{
+            border: 3px solid lightskyblue;
+            background-color: lightskyblue;
+            border-radius: 50%;
+            position: absolute;
+            top: 70%;
+            left: 190%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+        }
+        .cmt-icon::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            right: 30px;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            border-top-color: #056ad5;
+            border-bottom: 0;
+            border-left: 0;
+            transform: rotate(30deg);
         }
         .image {
             width: 250px;
@@ -52,7 +99,11 @@
 </head>
 <body>
 <div class="circle">
-    <i class="fas fa-comment-dots comment-icon"></i>
+    <div class="cmt-icon">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+    </div>
     <div class="imageCut">
         <img src="image/panda.png" alt="Panda" class="image">
     </div>
